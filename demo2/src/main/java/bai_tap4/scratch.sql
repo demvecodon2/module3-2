@@ -83,25 +83,12 @@ select  b.id_books,b.name as book_name, count(borrows.id_borrows) as borrow_coun
 from books b left join borrows on b.id_books = borrows.id_books group by    b.id_books
 order by  borrow_count desc
 limit 2;
-select b.id_books, b.name AS book_name, COUNT(br.id_borrows) AS borrow_count
+select b.id_books, b.name AS book_name, count(br.id_borrows) AS borrow_count
 from books b left join  borrows br on b.id_books = br.id_books
 group by b.id_books
 order by  borrow_count desc ;
 
-select b.id_books, b.name as book_name
-from books b
-         left join  borrows br on b.id_books = br.id_books
-where br.id_borrows is null;
-SELECT s.id_students, s.name AS student_name, COUNT(b.id_books) AS borrow_count
-FROM students s
-         JOIN borrows b ON s.id_students = b.id_students
-GROUP BY s.id_students
-ORDER BY borrow_count DESC;
-SELECT s.id_students, s.name AS student_name, COUNT(b.id_books) AS borrow_count
-FROM students s
-         JOIN borrows b ON s.id_students = b.id_students
-GROUP BY s.id_students
-ORDER BY borrow_count DESC;
+
 
 
 
