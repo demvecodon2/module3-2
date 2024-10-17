@@ -55,8 +55,8 @@ insert into student(name, gender, birtday, email, point, usename, class_id) VALU
  ('vo minh hieu','1','1981-12-12','hieuvm@gmail.com','3','hieuvm','1'),
  ('le xuan ky','1','1981-12-12','kylx@gmail.com','7','kynx','1'),
  ('le minh vu','1','1981-12-12','cunn@gmail.com','8','vulm','1'),
- ('nguyen van a','1','1981-12-12','cunn@gmail.com','8',null,null),
- ('tran van b','1','1981-12-12','tvb@gmail.com','4',null,null);
+ ('nguyen van a','1','1981-12-12','cunn@gmail.com',null,null,null),
+ ('tran van b','1','1981-12-12','tvb@gmail.com',null,null,null);
  create table instructor (
                             id int primary key auto_increment,
                             name varchar(100),
@@ -84,11 +84,11 @@ insert into instructor_class(instructor_id, class_id, start_time) VALUES (1,1,nu
 select  s.id as student_id,s.name as student_name, s.gender, s.birtday, s.email, s.point, c.name as class_name
 from student as s left join  class c on s.class_id = c.id;
 select * from student where name like 'nguyen minh hai';
-select * from student where name like '%nguyen%';
-select * from student where name like '%hai' or name like'%huynh';
+select * from student where name like 'nguyen %';
+select * from student where name like '% hai' or name like'% huynh';
 select * from student where point >5;
 select * from student where point in (4,6,8);
-select point , count(*) as student_count from student group by point order by point;
+select  point , count(*) as student_count from student group by point order by point;
 select point , count(*) as student_count from student where student.point >5 group by point order by point ;
 select point , count(*) as student_count from student where student.point >5 group by point having count(*) >=2 order by point;
 select s.id as student_id,s.name as student_name,s.gender,s.birtday, s.email, s.point, c.name as class_name
@@ -113,10 +113,43 @@ select class.name as class_name, count(student.id) as student_count
 from student join class on student.class_id = class.id
 where student.point > 5 group by  class.name having count(student.id) >= 2;
 
+select s.id as studennt_id, s.name as student_name, s.gender,s.birtday,s.email,s.point,c.name as class_name
+from student s left join class c on c.id = s.class_id
+where point >5 order by point;
 
-# select  b.id_books,b.name as book_name, count(borrows.id_borrows) as borrow_count
-# from books b left join borrows on b.id_books = borrows.id_books group by    b.id_books
-# order by  borrow_count desc
-# limit 2;
+select c.name as class_name,count(s.id) as student_count
+from class c join student s on c.id = s.class_id
+group by  c.id, c.name;
+
+# tính điểm cao nhất mỗi lớp
+select  c.name as class_name,max(s.point) as max_point
+from class c join student s on c.id = s.class_id
+group by  c.id, c.name;
+# trung bình moi lơps
+select c.name as class_name,avg(s.point) as average_point
+from class c join student s on c.id = s.class_id
+group by  c.id, c.name;
+# ngày sinh của học vien va giảng vien
+select name,birtday
+from instructor union
+select name,birtday
+from student;
+# 3 điêm cao nhat
+select name,point
+from student
+order by point desc
+limit 3;
+#  Lấy ra các học viên có điểm số là cao nhất của trung tâm.
+select name,point
+from student
+where point = (select max(point) from student);
+# giảng vien chưa dạy
+select i.name,i.birtday
+from instructor i left join instructor_class ic on i.id = ic.instructor_id
+where  ic.class_id is null;
+
+
+
+
 
 

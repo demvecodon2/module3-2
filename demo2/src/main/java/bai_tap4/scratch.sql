@@ -55,7 +55,7 @@ insert into books (name, page_size, id_authors, id_category) values
                                                                  ('Sử', 56, 3, 2),
                                                                  ('Địa', 76, 4, 2),
                                                                  ('Hóa', 32, 5, 1);
-
+CREATE INDEX books ON books (name);
 create table borrows (
                          id_borrows int primary key auto_increment,
                          id_students int,
@@ -88,10 +88,19 @@ from books b left join  borrows br on b.id_books = br.id_books
 group by b.id_books
 order by  borrow_count desc ;
 
+select b.id_books, b.name as book_name
+from books b left join  borrows br on b.id_books = br.id_books
+where br.id_borrows is null;
+select s.id_students, s.name as student_name, count(b.id_books)as borrow_count
+from students s join borrows b on s.id_students = b.id_students
+group by  s.id_students order by borrow_count desc ;
+select s.id_students, s.name as student_name, count(s.name) as borrow_count
+from students s join borrows b on s.id_students = b.id_students
+group by  s.id_students order by  borrow_count desc ;
 
-
-
-
+select  s.id_students, s.name as student_name, count(b.id_books) as borrow_count
+from students s left join borrows b on s.id_students = b.id_students
+group by s.id_students, s.name order by borrow_count;
 
 
 
