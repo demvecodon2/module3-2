@@ -121,6 +121,7 @@ select c.name as class_name,count(s.id) as student_count
 from class c join student s on c.id = s.class_id
 group by  c.id, c.name;
 
+
 # tính điểm cao nhất mỗi lớp
 select  c.name as class_name,max(s.point) as max_point
 from class c join student s on c.id = s.class_id
@@ -148,8 +149,14 @@ select i.name,i.birtday
 from instructor i left join instructor_class ic on i.id = ic.instructor_id
 where  ic.class_id is null;
 
+# --sub query
+select * from instructor i
+where  i.id not in(select ic.instructor_id from instructor_class ic group by ic.instructor_id);
+SELECT * FROM student s
+WHERE s.point >= ALL (SELECT s1.point FROM student s1 WHERE s1.point IS NOT NULL);
 
 
-
-
-
+alter table student
+add acc int;
+alter table student
+drop acc ;
