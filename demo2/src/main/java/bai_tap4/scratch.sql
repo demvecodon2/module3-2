@@ -77,43 +77,42 @@ values (1, 1, '2022-12-12', '2022-12-13'),
        (3, 3, '2022-12-12', '2022-12-13'),
        (4, 4, '2022-12-13', '2022-12-14'),
        (5, 1, '2022-12-15', '2022-12-16');
+#  Lấy ra toàn bộ sách có trong thư viện, cùng với tên thể loại và tác giả
 select b.id_books, b.name as book_name, b.page_size, a.name as author_name, c.name as category_name
 from books b
          join authors a on b.id_authors = a.id_authors
          join category c on b.id_category = c.id_category;
-
+# Lấy ra danh sách các học viên đã từng mượn sách và sắp xếp danh sách theo theo tên từ a->z
 select s.id_students, s.name AS student_name
 from students s
          join borrows b on s.id_students = b.id_students
 order by s.name asc;
-
+#  Lấy ra  2 quyển sách được mượn nhiều nhất
 select b.id_books, b.name as book_name, count(borrows.id_borrows) as borrow_count
 from books b
          left join borrows on b.id_books = borrows.id_books
 group by b.id_books
 order by borrow_count desc
 limit 2;
+#  Thông kê các đầu sách được mượn nhiều nhất
+
 select b.id_books, b.name AS book_name, count(br.id_borrows) AS borrow_count
 from books b
          left join borrows br on b.id_books = br.id_books
 group by b.id_books
 order by borrow_count desc;
-
+# Thông kê các đầu sách chưa được mượn
 select b.id_books, b.name as book_name
 from books b
          left join borrows br on b.id_books = br.id_books
 where br.id_borrows is null;
+#  Lấy ra danh sách các học viên đã từng mượn sách và sắp xếp  theo số lượng mượn sách từ lớn đến nhỏ
 select s.id_students, s.name as student_name, count(b.id_books) as borrow_count
 from students s
          join borrows b on s.id_students = b.id_students
 group by s.id_students
 order by borrow_count desc;
-select s.id_students, s.name as student_name, count(s.name) as borrow_count
-from students s
-         join borrows b on s.id_students = b.id_students
-group by s.id_students
-order by borrow_count desc;
-
+# Lấy ra các học viên mượn sách nhiều nhất của thư viện
 select s.id_students, s.name as student_name, count(b.id_books) as borrow_count
 from students s
          left join borrows b on s.id_students = b.id_students
