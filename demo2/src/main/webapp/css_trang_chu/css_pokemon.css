@@ -1,0 +1,306 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-realistic-water-bubbles-for-mobile-phone-background-picture-image_1597891.jpg");
+    background-size: cover;
+    color: #444;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    margin-left: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FF6F61;
+}
+h2 {
+    font-size: 1.5em;
+    color: #FF6F61;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #FF6F61;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 300px;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #FF8C00;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #FF6F61;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF6F61;
+    color: white;
+}
+
+.horizontal-list {
+    list-style-type: none;
+    padding: 110px;
+    margin: 0 0 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.account-info {
+    font-size: 16px;
+    color: #444;
+}
+
+.account-info a {
+    color: #FF6F61;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.account-info a:hover {
+    color: black;
+}
+
+.text-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-list li {
+    flex: 1 0 150px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(114, 244, 36, 5);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.text-list li:hover {
+    background-color: rgba(114, 244, 36, 5);
+    transform: translateY(-5px);
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0;
+    border-radius: 70px;
+    box-shadow: 0 40px 10px rgba(31, 231, 215, 0.1);
+    z-index: 10;
+    width: calc(100% - 40px);
+}
+
+#filterInput {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.circular-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.login-container {
+    border: 1px solid #FF6F61;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+}
+.login-container {
+    border: 1px solid #FF6F61;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    text-align: center;
+    color: #FF6F61;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #FF6F61;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.btn {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: #FF6F61;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+#message {
+    text-align: center;
+    color: #FF6F61;
+}
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.image-list li {
+    flex: 0 1 calc(25% - 10px);
+    margin: 5px;
+}
+
+.image-list img {
+    width: 100%;
+    border-radius: 5px;
+}
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.header h1, .header h2 {
+    color: #333;
+}
+
+.text-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-list li {
+    margin-bottom: 10px;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+.login-container {
+    border: 1px solid #FF6F61;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #FF6F61;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #FF6F61;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #FF8C00;
+}
+
+.form-control {
+    border-radius: 2px;
+}
+

@@ -1,0 +1,135 @@
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    margin: 0;*/
+/*    background-color: #f4f4f4;*/
+/*}*/
+
+/*header {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*    position: inherit;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*}*/
+
+/*#menu {*/
+/*    text-align: center;*/
+/*    background-color: #ffebcd;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*#menu ul {*/
+/*    list-style-type: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*#menu li {*/
+/*    display: inline;*/
+/*    margin: 0 15px;*/
+/*    position: relative;*/
+/*}*/
+
+/*#menu a {*/
+/*    text-decoration: none;*/
+/*    color: #333;*/
+/*    padding: 10px 15px;*/
+/*    transition: background-color 0.3s, color 0.3s;*/
+/*}*/
+
+/*#menu li a:hover {*/
+/*    background-color: #98fb98;*/
+/*    color: #000;*/
+/*}*/
+
+/*.grid-container {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(12, 1fr);*/
+/*    gap: 10px;*/
+/*}*/
+
+/*.grid-item {*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.item-4 {*/
+/*    grid-column: span 4;*/
+/*}*/
+
+/*.item-8 {*/
+/*    grid-column: span 8;*/
+/*}*/
+
+/*.carousel-inner {*/
+/*    display: block;*/
+/*    justify-content: inherit;*/
+/*    align-items: center;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.carousel-item img {*/
+/*    height: 600px;*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*    object-fit: cover;*/
+/*}*/
+/*.enlarged {*/
+/*    height: 100%;*/
+/*    width: auto;*/
+/*    max-width: none;}*/
+
+/*.card {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*footer {*/
+/*    text-align: center;*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*    padding: 20px 0;*/
+/*}*/
+
+/*p {*/
+/*    color: #666;*/
+/*}*/
+
+
+/*.carousel-inner img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
+
+
+/*.card-img-top {*/
+/*    height: 200px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+
+/*@media (max-width: 768px) {*/
+/*    .grid-container {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .card-img-top {*/
+/*        height: 150px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 576px) {*/
+/*    .card-img-top {*/
+/*        height: 120px;*/
+/*    }*/
+/*}*/
+
+
+/*!*header, footer {*!*/
+/*!*    text-align: center;*!*/
+/*!*}*!*/
+
+/*!*.navbar {*!*/
+/*!*    margin-bottom: 20px;*!*/
+/*!*}*!*/

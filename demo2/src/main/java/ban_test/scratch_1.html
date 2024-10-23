@@ -26,10 +26,10 @@
         .header {
             background-image: url("https://staticpokeheroes.com/css/header_img/4.png");
             text-align: center;
-            border-radius: 5px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 87px;
             color: white;
-            margin: 10px 0;
+            margin: 17px 0;
         }
 
         h1 {
@@ -80,7 +80,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.1);
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -95,8 +95,8 @@
         }
 
         .dropdown-content a:hover {
-            background-color: white;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
         }
 
         .dropdown:hover .dropdown-content {
@@ -159,7 +159,7 @@
             flex: 1 0 150px;
             margin: 10px;
             padding: 10px;
-            background-color: rgba(74, 144, 226, 0.8);
+            background-color: rgba(155, 244, 1, 0.8);
             border-radius: 5px;
             text-align: center;
             transition: background-color 0.3s, transform 0.3s;
@@ -168,12 +168,6 @@
         .text-list li:hover {
             background-color: rgba(74, 144, 226, 1);
             transform: translateY(-5px);
-        }
-
-        .image-list {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
         }
 
         .image-list li {
@@ -202,95 +196,186 @@
             width: calc(100% - 100px);
         }
 
-        #filterInput, .text-list {
-            margin-top: 50px;
+
+
+        .post-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
         }
+
+        .post {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 10px;
+            flex: 1 0 calc(25% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+        .post h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+
+        .post p {
+            margin: 0;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+
     </style>
     <script>
-        function filterImages() {
-            const filterInput = document.getElementById('filterInput');
-            const filter = filterInput.value.toLowerCase();
-            const imageItems = document.querySelectorAll('.image-list li');
-
             imageItems.forEach(item => {
-                const text = item.textContent || item.querySelector('img').alt; // Get the text or alt of the image
+                const text = item.textContent || item.querySelector('img').alt;
                 if (text.toLowerCase().includes(filter)) {
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
                 }
             });
-        }
+
     </script>
 </head>
 <body>
 <ul class="horizontal-list fixed">
     <div class="left-menu">
-        <li><a href="login">Login</a></li>
+        <li><a href="http://localhost:8080/css_trang_chu/login.jsp">Login</a></li>
         <li class="dropdown">
             <button class="dropbtn">☰ Menu</button>
             <div class="dropdown-content">
-                <a href="https://pokeheroes.com/login">Đăng nhập</a>
-                <a href="https://pokeheroes.com/">Tìm kiếm</a>
-                <a href="https://pokeheroes.com/">Trang chủ</a>
+                <a href="http://localhost:63342/demo2/demo2/src/main/java/ban_test/scratch_1.html?_ijt=o2m0v8o2cgtrbf2jb630kg86g6&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    nhập</a>
+                <a href="http://localhost:8080/css_trang_chu/list.jsp">Tìm kiếm</a>
+                <a href="http://localhost:63342/demo2/demo2/src/main/java/ban_test/scratch_1.html?_ijt=o2m0v8o2cgtrbf2jb630kg86g6&_ij_reload=RELOAD_ON_SAVE">Trang
+                    chủ</a>
                 <a href="https://pokeheroes.com/">Cộng đồng</a>
-                <a href="">Đăng xuất</a>
+                <a href="/css_trang_chu/login.jsp">Đăng xuất</a>
             </div>
         </li>
     </div>
 
     <div class="image-container">
         <li>
-            <img src="https://st.gamevui.vn/images/image/2016/8/11/pokemon-go-600.jpg" alt="Pokemon Go" class="circular-image">
+            <img src="https://st.gamevui.vn/images/image/2016/8/11/pokemon-go-600.jpg" alt="Pokemon Go"
+                 class="circular-image">
         </li>
         <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT95vObKKGp-doDd3q3PPrUHHwyBO9Mdck4JQ&s" alt="Image 2" class="circular-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT95vObKKGp-doDd3q3PPrUHHwyBO9Mdck4JQ&s"
+                 alt="Image 2" class="circular-image">
         </li>
     </div>
 
     <li class="account-info">
-        Don't have an account yet? <a href="registration">Đăng ký</a>
+        Don't have an account yet? <a href="http://localhost:8080/css_trang_chu/dangki.jsp">Đăng ký</a>
     </li>
 </ul>
-
 <div class="container">
     <div class="header">
-        <h1>Danh Sách Portfolio</h1>
-        <h2>Danh Sách Tìm Kiếm</h2>
+    </div>
+    <ul class="text-list">
+        <li>
+            <a href="http://localhost:63342/demo2/demo2/src/main/java/ban_test/scratch_1.html?_ijt=o2m0v8o2cgtrbf2jb630kg86g6&_ij_reload=RELOAD_ON_SAVE">Trang
+                Chủ</a></li>
+        <li><a href="https://pokeheroes.com/">Sự Kiện</a></li>
+        <li><a href="https://pokeheroes.com/">Cửa Hàng</a></li>
+        <li><a href="https://pokeheroes.com/">Từ Điển Pokemon</a></li>
+        <li><a href="https://pokeheroes.com/login">Tải Game</a></li>
+        <li><a href="https://pokeheroes.com/registration">Mua Bán</a></li>
+        <li><a href="https://pokeheroes.com/forum">Cộng Đồng</a></li>
+    </ul>
+    <div class="post-container">
+        <div class="post-container">
+            <div class="post">
+                <img src="https://staticpokeheroes.com/img/artworks/eggs/129s.png" alt="Hình ảnh bài viết 1"
+                     class="post-image">
+                <h3>Event trứng </h3>
+                <p>
+                    Trainers, dark storm clouds have been swirling above Emera Town's coastline, bringing flashes of
+                    lightning and a mysterious sighting. Fishermen claim they've seen golden scales shimmering beneath
+                    the waves right after a bolt struck the sea!
+
+                    Rumor has it that a certain Pokémon, normally underestimated, has been imbued with shocking new
+                    power. Locals say it’s an ill omen, but seasoned trainers know better—this is an incredible
+                    opportunity!
+
+                    A new Event Pokémon is now available until October 13th, 4PM. This Event Pokémon was created by our
+                    member Koishi in our recent spriting contest. Congratulations!</p>
+            </div>
+            <div class="post">
+                <img src="https://staticpokeheroes.com/img/news/turo-cropped.png" alt="Hình ảnh bài viết 2"
+                     class="post-image">
+                <h3>cập nhật nhân vật</h3>
+                <p>Professor Sada and Professor Turo are back with a new Paldean Research Task: For a limited time, you
+                    can get the past Pokémon Brute Bonnet and/or the future Pokémon Iron Hands by helping them with
+                    their studies. As always, they have a great interest in Pokemon eggs obtained from Rowan's Lab. They
+                    claim there's something awfully... paradox about them.
+                    These quests are available to trainers of level 35 or higher who have completed either the Koraidon
+                    Quest or Miraidon Quest (or both). Both quests can be repeated as often as you want until November
+                    30th, and both Pokémon come with a 10% shiny chance. Good luck!</p>
+            </div>
+            <div class="post">
+                <img src="https://staticpokeheroes.com/img/news/chimchar.png" alt="Hình ảnh bài viết 3"
+                     class="post-image">
+                <h3>cập nhật pokemon</h3>
+                <p>Emera Town is in chaos, and it's all thanks to the latest outbreak of Monkey Pokémon! As part of the
+                    ongoing Zarude event, things are about to get even wilder with the arrival of Monkey Mondeys. Every
+                    Monday during the event, Zarude's chance of appearing is doubled, making it the perfect time for
+                    Trainers to go hunting for this elusive Mythical Pokémon.
+
+                    But that’s not all. On Monkey Mondeys, every Monkey Pokémon has a strongly increased chance of
+                    hatching as a shiny from eggs. Trainers will have the opportunity to hatch shiny versions of Mankey,
+                    Aipom, Grookey, Chimchar, Panpour, Pansear, Pansage, Passimian, Oranguru, and even Slakoth.
+
+                    With the trees in Emera Town practically bursting with monkeys and Trainers scrambling to hatch as
+                    many eggs as possible, Monkey Mondeys are sure to bring plenty of excitement. Be sure to collect
+                    your Zarude eggs and get ready for the shinies to roll in!</p>
+            </div>
+            <div class="post">
+                <img src="https://staticpokeheroes.com/img/news/zarude.png" alt="Hình ảnh bài viết 4"
+                     class="post-image">
+                <h3>new pokemon</h3>
+                <p>The first hints of autumn are starting to show—the air is crisp, and the trees are just beginning to
+                    trade their green for vibrant shades of gold and orange. Though summer is behind us, it’s not quite
+                    time to retreat indoors just yet! What’s that sound coming from outside? Could it be... a Monkey?
+
+                    Yes, the long-awaited return is here: the mythical Pokémon Zarude has arrived in Emera Town for the
+                    month of September! This elusive creature is eager to meet daring trainers and is known to offer
+                    special gifts to those who manage to impress it. How do you catch its eye? Word has it that
+                    interacting with a variety of Pokémon might just do the trick!</p>
+            </div>
+        </div>
+        <div class="post">
+            <img src="https://staticpokeheroes.com/img/news/zarude.png" alt="Hình ảnh bài viết 4"
+                 class="post-image">
+            <h3>new pokemon</h3>
+            <p>The first hints of autumn are starting to show—the air is crisp, and the trees are just beginning to
+                trade their green for vibrant shades of gold and orange. Though summer is behind us, it’s not quite
+                time to retreat indoors just yet! What’s that sound coming from outside? Could it be... a Monkey?
+
+                Yes, the long-awaited return is here: the mythical Pokémon Zarude has arrived in Emera Town for the
+                month of September! This elusive creature is eager to meet daring trainers and is known to offer
+                special gifts to those who manage to impress it. How do you catch its eye? Word has it that
+                interacting with a variety of Pokémon might just do the trick!</p>
+        </div>
     </div>
 
-    <input type="text" id="filterInput" placeholder="Filter items..." oninput="filterImages()">
 
-    <ul class="text-list">
-        <li><a href="https://pokeheroes.com/">All</a></li>
-        <li><a href="https://pokeheroes.com/">Web app</a></li>
-        <li><a href="https://pokeheroes.com/">UI/UX</a></li>
-        <li><a href="https://pokeheroes.com/">Graphics Design</a></li>
-        <li><a href="https://pokeheroes.com/login">Mobile App</a></li>
-        <li><a href="https://pokeheroes.com/registration">Branding</a></li>
-        <li><a href="https://pokeheroes.com/forum">Marketing</a></li>
-    </ul>
+</div>
 
-    <ul class="image-list">
-        <li>
-            <img src="https://azskin.vn/cdn/shop/files/D_HH43_d648a931-a56d-4162-998d-c099c71c07ea.jpg?v=1690536871" alt="Mô tả hình 1">q 1
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjSVpfCYOOv2MjoXmeAckavhl9aTUKiIHYA&s" alt="Mô tả hình 2">e 2
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtN5q52Od8Wk6fGRlJN9pX-T0xsz0BKIQYQ&s" alt="Mô tả hình 3">d 3
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtN5q52Od8Wk6fGRlJN9pX-T0xsz0BKIQYQ&s" alt="Mô tả hình 4">c 4
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtN5q52Od8Wk6fGRlJN9pX-T0xsz0BKIQYQ&s" alt="Mô tả hình 5">v 5
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtN5q52Od8Wk6fGRlJN9pX-T0xsz0BKIQYQ&s" alt="Mô tả hình 6">a 6
-        </li>
-    </ul>
 </div>
 </body>
 </html>
