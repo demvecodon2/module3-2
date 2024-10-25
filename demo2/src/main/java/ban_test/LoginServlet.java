@@ -15,7 +15,6 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("css_trang_chu/login.jsp").forward(req, resp);
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
@@ -24,7 +23,7 @@ public class LoginServlet extends HttpServlet {
         if ("admin".equals(username) && "admin".equals(password)) {
             String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
             req.setAttribute("message", "admin đã đăng nhập thành công vào lúc " + time);
-            req.getRequestDispatcher("css_trang_chu/success.jsp").forward(req, resp);
+            req.getRequestDispatcher("/home_page.jsp").forward(req, resp);
         } else {
             req.setAttribute("error", "username or password incorrect");
             req.getRequestDispatcher("css_trang_chu/login.jsp").forward(req, resp);

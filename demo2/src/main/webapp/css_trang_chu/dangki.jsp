@@ -14,31 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Sách Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css_pokemon.css">
-    <script>
-        function filterImages() {
-            const filterInput = document.getElementById('filterInput');
-            const filter = filterInput.value.toLowerCase();
-            const textItems = document.querySelectorAll('.text-list li');
 
-            textItems.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(filter) ? '' : 'none';
-            });
-        }
-        function toggleDropdown() {
-            const dropdownMenu = document.getElementById("dropdownMenu");
-            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                const dropdownMenu = document.getElementById("dropdownMenu");
-                if (dropdownMenu.style.display === "block") {
-                    dropdownMenu.style.display = "none";
-                }
-            }
-        };
-    </script>
 </head>
 <body>
 <ul class="horizontal-list fixed">

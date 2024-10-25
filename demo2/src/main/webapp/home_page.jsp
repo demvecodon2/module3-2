@@ -243,20 +243,8 @@
             border-radius: 5px;
             margin-bottom: 15px;
         }
-
-
     </style>
-    <script>
-        imageItems.forEach(item => {
-            const text = item.textContent || item.querySelector('img').alt;
-            if (text.toLowerCase().includes(filter)) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
-        });
 
-    </script>
 </head>
 <body>
 <ul class="horizontal-list fixed">

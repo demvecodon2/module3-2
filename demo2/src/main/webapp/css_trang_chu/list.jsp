@@ -13,32 +13,7 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css_pokemon.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script>
-        function filterImages() {
-            const filterInput = document.getElementById('filterInput');
-            const filter = filterInput.value.toLowerCase();
-            const imageItems = document.querySelectorAll('.card');
 
-            imageItems.forEach(item => {
-                const name = item.getAttribute('data-name').toLowerCase();
-                item.style.display = name.includes(filter) ? '' : 'none';
-            });
-        }
-
-        function toggleDropdown() {
-            const dropdownMenu = document.getElementById("dropdownMenu");
-            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        }
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                const dropdownMenu = document.getElementById("dropdownMenu");
-                if (dropdownMenu.style.display === "block") {
-                    dropdownMenu.style.display = "none";
-                }
-            }
-        };
-
-    </script>
 </head>
 <body>
 <ul class="horizontal-list fixed">

@@ -238,17 +238,33 @@
 
 
     </style>
-    <script>
-            imageItems.forEach(item => {
-                const text = item.textContent || item.querySelector('img').alt;
-                if (text.toLowerCase().includes(filter)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
 
+        <script>
+            function filterImages() {
+            const filterInput = document.getElementById('filterInput');
+            const filter = filterInput.value.toLowerCase();
+            const textItems = document.querySelectorAll('.text-list li');
+
+            textItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(filter) ? '' : 'none';
+        });
+        }
+            function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        }
+
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.style.display === "block") {
+            dropdownMenu.style.display = "none";
+        }
+        }
+        };
     </script>
+
 </head>
 <body>
 <ul class="horizontal-list fixed">
@@ -375,7 +391,7 @@
 
 
 </div>
-    
+
 </div>
 </body>
 </html>
