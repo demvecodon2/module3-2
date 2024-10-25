@@ -22,7 +22,6 @@ public class StudentController extends HttpServlet {
         if (action == null) {
             action = "";
         }
-
         try {
             switch (action) {
                 case "create":
@@ -88,13 +87,13 @@ public class StudentController extends HttpServlet {
     private void deleteStudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String idToDelete = request.getParameter("id");
         studentService.delete(idToDelete);
-        response.sendRedirect(request.getContextPath() + "/views/studentslist.jsp");
+        response.sendRedirect(request.getContextPath() + "/students");
     }
 
     private void listStudents(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Student> students = studentService.findAll();
         request.setAttribute("students", students);
-        request.getRequestDispatcher("/views/studentslist.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/students.jsp").forward(request, response);
     }
 
     private void createStudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -105,7 +104,7 @@ public class StudentController extends HttpServlet {
         String anh = request.getParameter("anh");
         Student newStudent = new Student(id, name, gender, score, anh);
         studentService.add(newStudent);
-        response.sendRedirect(request.getContextPath() + "/view/studentslist.jsp");
+        response.sendRedirect(request.getContextPath() + "/students");
     }
 
     private void editStudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -116,7 +115,7 @@ public class StudentController extends HttpServlet {
         String anhToUpdate = request.getParameter("anh");
         Student updatedStudent = new Student(idToUpdate, nameToUpdate, genderToUpdate, scoreToUpdate, anhToUpdate);
         studentService.update(idToUpdate, updatedStudent);
-        response.sendRedirect(request.getContextPath() + "/views/studentslist.jsp");
+        response.sendRedirect(request.getContextPath() + "/students ");
     }
 
     private void handleInvalidAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
