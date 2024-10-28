@@ -5,7 +5,7 @@
   Time: 2:28 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +25,13 @@
       <p><strong>Author:</strong> ${book.author}</p>
       <p><strong>Page Size:</strong> ${book.pageSize}</p>
       <p><strong>Category:</strong> ${book.category}</p>
+
+      <div class="mb-3">
+        <strong>Image:</strong>
+        <c:if test="${not empty book.image}">
+          <img src="${book.image}" alt="Book Image" class="img-fluid mt-2" style="max-height: 300px;" />
+        </c:if>
+      </div>
     </div>
   </div>
 

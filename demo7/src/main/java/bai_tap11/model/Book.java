@@ -6,13 +6,22 @@ public class Book {
     private int pageSize;
     private String author;
     private String category;
-
-    public Book(int id, String title, int pageSize, String author, String category) {
+    private String image;
+    public Book(int id, String title, int pageSize, String author, String category,String image) {
         this.id = id;
         this.title = title;
         this.pageSize = pageSize;
         this.author = author;
         this.category = category;
+        this.image = image;
+    }
+    public Book() {
+    }
+    public String getImage() {
+        return image;
+    }
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getId() {

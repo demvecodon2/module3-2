@@ -5,7 +5,8 @@
   Time: 2:27 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,10 +47,22 @@
             <input type="text" class="form-control" id="category" name="category" required />
         </div>
 
+        <div class="form-group">
+            <label for="image">Image (optional):</label>
+            <input type="text" class="form-control" id="image" name="image" placeholder="Enter image URL" value="${param.image}" />
+        </div>
+
         <button type="submit" class="btn btn-primary">Create Book</button>
     </form>
 
     <a href="${pageContext.request.contextPath}/book" class="btn btn-secondary mt-3">Back to List</a>
+
+    <c:if test="${not empty param.image}">
+        <div class="mt-3">
+            <h5>Book Image:</h5>
+            <img src="${param.image}" alt="Book Image" class="img-fluid" style="max-height: 200px;" />
+        </div>
+    </c:if>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

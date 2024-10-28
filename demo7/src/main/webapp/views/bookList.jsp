@@ -33,6 +33,7 @@
             <th>Author</th>
             <th>Page Size</th>
             <th>Category</th>
+            <th>Image</th>
             <th>Actions</th>
         </tr>
         </thead>
@@ -44,6 +45,16 @@
                 <td>${book.author}</td>
                 <td>${book.pageSize}</td>
                 <td>${book.category}</td>
+                <td>
+                    <c:if test="${not empty book.image}">
+                        <img src="${book.image}" alt="Book Image" class="img-fluid" style="max-height: 100px;" />
+                    </c:if>
+                    <c:if test="${empty book.image}">
+                        <p>No image available</p>
+                    </c:if>
+                </td>
+
+
                 <td>
                     <a href="${pageContext.request.contextPath}/book?action=view&id=${book.id}" class="btn btn-info btn-sm">View</a>
                     <a href="${pageContext.request.contextPath}/book?action=edit&id=${book.id}" class="btn btn-warning btn-sm">Edit</a>

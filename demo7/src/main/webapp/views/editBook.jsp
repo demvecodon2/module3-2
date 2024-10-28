@@ -5,7 +5,7 @@
   Time: 2:28 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +41,18 @@
             <label for="category">Category:</label>
             <input type="text" class="form-control" id="category" name="category" value="${book.category}" required />
         </div>
+
+        <div class="form-group">
+            <label for="image">Image URL:</label>
+            <input type="text" class="form-control" id="image" name="image" value="${book.image}" required />
+        </div>
+
+        <c:if test="${not empty book.image}">
+            <div class="mt-3">
+                <h5>Current Book Image:</h5>
+                <img src="${book.image}" alt="Book Image" class="img-fluid" style="max-height: 200px;" />
+            </div>
+        </c:if>
 
         <button type="submit" class="btn btn-primary">Update Book</button>
     </form>

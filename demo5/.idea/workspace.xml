@@ -5,38 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4c4a757-d8eb-4c32-89fb-ff0558c6bc25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo4/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo4/src/main/java/bai_tap10/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo4/src/main/java/bai_tap10/repository/IStudentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo4/src/main/java/bai_tap10/repository/StudentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/repository/IStudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/repository/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/service/IStudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/java/bai_tap9/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/java/bai_tap9/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/java/ban_test/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/java/ban_test/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/java/ban_test/scratch_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/java/ban_test/scratch_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/dangki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/dangki.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/webapp/css_trang_chu/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/webapp/dangki/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/webapp/dangki/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/src/main/webapp/home_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/src/main/webapp/home_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo3/src/main/java/model/Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo3/src/main/java/model/Games.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo3/src/main/java/model/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo3/src/main/java/model/Players.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo3/src/main/java/model/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo3/src/main/java/model/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo3/src/main/java/model/accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo3/src/main/java/model/accounts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/controller/KhachHangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/database/console.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/model/GioHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/model/HoaDon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/repository/IKhachHangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/repository/KhachHangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/service/IKhachHangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/java/service/KhachHangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/webapp/views/customers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/webapp/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/webapp/views/purchasedCustomers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo6/src/main/webapp/views/topPurchasingCustomers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai_tap10/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bai_tap10/controller/StudentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,7 +83,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.952" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.952" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.952" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.95" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : demo5-1.0-SNAPSHOT.war (exploded)">
@@ -209,6 +191,11 @@
       <workItem from="1729838108388" duration="115000" />
       <workItem from="1729838271891" duration="5211000" />
       <workItem from="1729843973471" duration="14000" />
+      <workItem from="1729844095921" duration="6343000" />
+      <workItem from="1729987153354" duration="1699000" />
+      <workItem from="1730078642418" duration="5000" />
+      <workItem from="1730084100168" duration="421000" />
+      <workItem from="1730087308402" duration="3138000" />
     </task>
     <servers />
   </component>

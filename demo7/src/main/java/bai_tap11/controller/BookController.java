@@ -110,8 +110,9 @@ public class BookController extends HttpServlet {
         int pageSize = Integer.parseInt(req.getParameter("pageSize"));
         String author = req.getParameter("author");
         String category = req.getParameter("category");
+        String image = req.getParameter("image");
 
-        Book newBook = new Book(id, title, pageSize, author, category);
+        Book newBook = new Book(id, title, pageSize, author, category,image);
         bookService.add(newBook);
         resp.sendRedirect(req.getContextPath() + "/book");
     }
@@ -122,8 +123,9 @@ public class BookController extends HttpServlet {
         int pageSize = Integer.parseInt(req.getParameter("pageSize"));
         String author = req.getParameter("author");
         String category = req.getParameter("category");
+        String image = req.getParameter("image");
 
-        Book updatedBook = new Book(id, title, pageSize, author, category);
+        Book updatedBook = new Book(id, title, pageSize, author, category,image);
         bookService.update(updatedBook);
         resp.sendRedirect(req.getContextPath() + "/book");
     }
