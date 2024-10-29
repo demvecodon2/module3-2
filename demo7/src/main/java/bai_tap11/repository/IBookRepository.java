@@ -6,11 +6,17 @@ import java.util.List;
 
 public interface IBookRepository {
     void add(Book book);
+
     Book getById(int id);
+
     void update(Book book);
+
     void remove(int id);
+
+    List<Book> search(String title);
+
     List<Book> findAll();
-    List<Book> findByTitle(String title);
+
 
 }
 

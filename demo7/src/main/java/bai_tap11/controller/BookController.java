@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 @WebServlet("/book")
@@ -104,6 +105,14 @@ public class BookController extends HttpServlet {
         }
     }
 
+    private void searchBook(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String title = req.getParameter("title");
+        List<Book> searchResult = bookService.search(title);
+        System.out.println(searchResult);
+        req.setAttribute("books", searchResult);
+        req.getRequestDispatcher("/views/bookList.jsp").forward(req, resp);
+    }
+
     private void createBook(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         String title = req.getParameter("title");
@@ -112,7 +121,7 @@ public class BookController extends HttpServlet {
         String category = req.getParameter("category");
         String image = req.getParameter("image");
 
-        Book newBook = new Book(id, title, pageSize, author, category,image);
+        Book newBook = new Book(id, title, pageSize, author, category, image);
         bookService.add(newBook);
         resp.sendRedirect(req.getContextPath() + "/book");
     }
@@ -125,16 +134,10 @@ public class BookController extends HttpServlet {
         String category = req.getParameter("category");
         String image = req.getParameter("image");
 
-        Book updatedBook = new Book(id, title, pageSize, author, category,image);
+        Book updatedBook = new Book(id, title, pageSize, author, category, image);
         bookService.update(updatedBook);
         resp.sendRedirect(req.getContextPath() + "/book");
     }
 
-    private void searchBook(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String title = req.getParameter("title");
-        List<Book> books = bookService.findByTitle(title);
-        req.setAttribute("books", books);
-        req.setAttribute("searchTitle", title);
-        req.getRequestDispatcher("/views/bookList.jsp").forward(req, resp);
-    }
+
 }

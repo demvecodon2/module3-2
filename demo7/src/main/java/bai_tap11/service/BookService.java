@@ -4,7 +4,6 @@ import bai_tap11.model.Book;
 import bai_tap11.repository.BookRepository;
 import bai_tap11.repository.IBookRepository;
 
-import java.util.Collections;
 import java.util.List;
 
 public class BookService implements IBookService {
@@ -32,13 +31,16 @@ public class BookService implements IBookService {
     }
 
     @Override
+    public List<Book> search(String title) {
+        List<Book> books = bookRepository.search(title);
+        System.out.println(books);
+        return books;
+    }
+
+    @Override
     public List<Book> findAll() {
         return bookRepository.findAll();
     }
 
-    @Override
-    public List<Book> findByTitle(String title) {
-        return bookRepository.findByTitle(title);
-    }
 
 }
