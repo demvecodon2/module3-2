@@ -1,4 +1,4 @@
-package bai_tap11.demol;
+package bai_tap11.model;
 
 
 public class Book {
